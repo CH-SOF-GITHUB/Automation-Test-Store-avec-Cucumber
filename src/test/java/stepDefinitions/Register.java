@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Register {
     WebDriver driver;
+
     @Given("je suis sur le site web Automation Test Store")
     public void je_suis_sur_le_site_web_automation_test_store() {
         driver = new ChromeDriver();
@@ -146,9 +147,9 @@ public class Register {
     public void vérificationDeCréationDeCompte() {
         // vérification register
         String currentUrl = driver.getCurrentUrl();
-        if(currentUrl.equals("https://automationteststore.com/index.php?rt=account/success")){
+        if (currentUrl.equals("https://automationteststore.com/index.php?rt=account/success")) {
             System.out.println("compte crée avec succéss et affichage d'un message de confirmation");
-        }else {
+        } else {
             System.out.println("échec de création d'un comte Store");
         }
     }
