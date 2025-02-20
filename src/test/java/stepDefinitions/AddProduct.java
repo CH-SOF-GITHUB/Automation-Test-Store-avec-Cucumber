@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,9 @@ public class AddProduct {
         driver = new ChromeDriver();
         driver.get("https://automationteststore.com/");
         driver.manage().window().maximize();
+        // methode de gestion d'attentes
+        // que des éléments soient disponibles ou que certaines conditions soient remplies.
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @When("je clique sur une categorie")
@@ -58,7 +62,7 @@ public class AddProduct {
 
     @And("je clique sur le bouton Add To Chart en produit deux")
     public void jeCliqueSurLeBoutonAddToChartEnProduitDeux() {
-        WebElement AddToChart2 = driver.findElement(By.xpath("//*[@id=\"product\"]/fieldset/div[5]/ul/li/a"));
+        WebElement AddToChart2 = driver.findElement(By.className("productpagecart"));
         AddToChart2.click();
     }
 
