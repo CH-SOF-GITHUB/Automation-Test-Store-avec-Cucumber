@@ -10,9 +10,9 @@ Feature: Tester la fonctionnalité de connexion
     Examples:
     |username                  |password|
     |"ChakerStore1"              |"Azerty123"|
-    |"ChakerStore34"             |"Azert"     |
+    |"ChakerStore34"             |"AzertY123"     |
     |"ChakerStore1"              |"Azert12345"|
-    |"ChakerStore40"             |"Azerty123" |
+    |"ChakerStore40"             |"Azerty1" |
     |"ChakerStore1"              |""        |
     |"ChakerStore110"            |""        |
     |""                        |"Azerty123" |

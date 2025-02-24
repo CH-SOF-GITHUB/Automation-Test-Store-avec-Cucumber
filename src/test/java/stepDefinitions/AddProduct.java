@@ -28,7 +28,8 @@ public class AddProduct {
 
     @When("je clique sur une categorie")
     public void jeCliqueSurUneCategorie() {
-        WebElement books = driver.findElement(By.xpath("//*[@id=\"categorymenu\"]/nav/ul/li[8]/a"));
+        WebElement books = driver.findElement(By.linkText("Books"));
+        //WebElement books = driver.findElement(By.xpath("//*[@id=\"categorymenu\"]/nav/ul/li[8]/a"));
         books.click();
     }
 
